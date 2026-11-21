@@ -1,1 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #000000;
+}
+
+header .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+header .header-content {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+header .profile-photo:hover {
+    transform: scale(1.08);
+}
+
+header .profile-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+header .profile-name {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: none;
+}
+
+header .profile-subtitle {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 1;
+    margin-top: 2px;
+    text-shadow: none;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    max-width: 800px;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.skill-card {
+    border: 1px solid #000000;
+    padding: 14px 18px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s;
+}
+
+.skill-card:hover {
+    background-color: #f0f0f0;
+}
+
+.skill-card .skill-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.skill-card .skill-desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.project-card {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px 22px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.project-card:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+.project-card .project-name {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.project-card .project-desc {
+    font-size: 0.95rem;
+    margin: 8px 0 12px;
+    opacity: 0.85;
+}
+
+.project-card .project-tech {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2px 12px;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+}
+
+.project-card .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 2px;
+}
+
+.project-card .project-link:hover {
+    opacity: 0.6;
+}
+
+.education-item {
+    margin-bottom: 14px;
+    padding-left: 4px;
+}
+
+.education-item .edu-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.education-item .edu-detail {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 20px 30px;
+    margin-top: 40px;
+    border-top: 2px solid #000000;
+}
+
+footer .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .social-links a i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+footer .social-links a:hover i {
+    transform: scale(1.15);
+}
+
+footer .social-links a.github:hover i {
+    color: #ffffff;
+}
+
+footer .social-links a.linkedin:hover i {
+    color: #0A66C2;
+}
+
+footer .social-links a.instagram:hover i {
+    color: #E4405F;
+}
+
+footer .social-links a.tiktok:hover i {
+    color: #00f2ea;
+}
+
+footer .social-links .separator {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 50vh;
+        min-height: 350px;
+        max-height: 500px;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+        width: 90%;
+        padding: 20px;
+    }
+
+    header .profile-photo {
+        width: 100px;
+        height: 100px;
+        border-width: 3px;
+    }
+
+    header .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .profile-name {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    header .profile-subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skill-card {
+        padding: 12px 14px;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 30px 15px 25px;
+    }
+
+    footer .social-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 30px;
+        justify-items: center;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    footer .social-links a {
+        font-size: 0.95rem;
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    footer .social-links a i {
+        font-size: 1.5rem;
+    }
+
+    footer .social-links .separator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 40vh;
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    header .profile-photo {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+
+    header .profile-name {
+        font-size: 1.5rem;
+    }
+
+    header .profile-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .project-card {
+        padding: 14px 12px;
+    }
+
+    .project-card .project-name {
+        font-size: 1rem;
+    }
+
+    .project-card .project-desc {
+        font-size: 0.85rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        padding: 25px 10px 20px;
+    }
+
+    footer .social-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 20px;
+        max-width: 280px;
+    }
+
+    footer .social-links a {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    footer .social-links a i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    header {
+        height: 60vh;
+        max-height: 800px;
+    }
+
+    header .header-content {
+        top: 60px;
+        left: 60px;
+        gap: 30px;
+    }
+
+    header .profile-photo {
+        width: 120px;
+        height: 120px;
+        border-width: 4px;
+    }
+
+    header .profile-name {
+        font-size: 2.8rem;
+    }
+
+    header .profile-subtitle {
+        font-size: 1.3rem;
+    }
+}
